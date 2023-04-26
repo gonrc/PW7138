@@ -1,5 +1,16 @@
 /* *{border:1px solid red} */
 
+header {
+display: flex;
+justify-content: center;
+align-items: center; 
+}
+
+header a {
+margin-right: 3em;
+}
+  
+  
 body{background-color:whitesmoke;}
 
 #titular{color:navy;font-size:50px;font-family: 'Roboto', sans-serif;}
@@ -7,6 +18,33 @@ body{background-color:whitesmoke;}
 * {
     font-family: Arial;
    }
+
+p{background-color: #989898 ;
+color:white
+ }
+
+ p::first-letter {
+    font-size: 2em;
+    color: black;
+  }
+  
+
+a:hover {
+    background-color: darkgrey;
+  }
+
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center;
+ }
+
+/* Para pantallas de menos de 600px */
+@media (max-width: 600px) {
+    .image-container {
+      flex-direction: column;
+    }
+  }
 
 /* Asi se hace un comentario en css */
 
