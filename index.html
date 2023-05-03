@@ -5,22 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gonzalo RC</title>
-    <link rel="stylesheet" href="style.css"> <!-- Aca linkeo la hoja de estilo. Por convención, tiene que estar en el head. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/logo_G.ico">
+    <link rel="stylesheet" href="style.css"> <!-- Aca linkeo la hoja de estilo. Por convención, tiene que estar en el head. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body class="text-bg-secondary p-3">
     <header>
         <!-- Estamos en el header -->
-        <a href="./contacto.html">Contacto</a>
-        <a href="https://campus.itba.edu.ar/ultra/courses/_26355_1/outline" target="_blank">Campus virtual (PW-71.38)</a> <!-- con el target blank me lo manda a new tab -->  
-        <a href="https://github.com/gonrc/PW7138" target="_blank">GitHub personal</a>    
-        <a href="https://github.com/estebanpiazza/programacion-web-q1-a" target="_blank">GitHub de la clase</a> 
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="./contacto.html" target=”_blank”>Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://campus.itba.edu.ar/ultra/courses/_26355_1/outline" target=”_blank”>Campus virtual (PW-71.38)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/gonrc/PW7138" target=”_blank”>GitHub personal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/estebanpiazza/programacion-web-q1-a" target=”_blank”>GitHub de la clase</a>
+            </li>
+        </ul>
     </header>
     <main>
         <!-- Estamos en el main -->
+        <div class="dark-mode-switch">
+            <input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')"> 
+            <label for="dark-mode">Dark mode</label>
+        </div>
         <h1 id="titular">GRC - Legajo 64552</h1> <!--Este es el titulo de la pagina y es lo que Google lee para saber el contenido-->
         <h2>Materia: 71.38 - Programación Web</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus qui, praesentium quae laboriosam veniam vitae sunt animi eius facilis quasi possimus consectetur eaque. Illum aspernatur iure repellendus inventore quam saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque facere repudiandae exercitationem corrupti unde temporibus dicta explicabo inventore. Unde nostrum at possimus earum illum cupiditate ratione commodi, sed id assumenda! Fugit accusantium assumenda sunt velit quam sapiente saepe excepturi laboriosam quas cupiditate ex minus eligendi nam voluptatum, ab, neque odio doloribus. Minima veniam fugit quia omnis, ducimus ab dolore rem. Omnis ratione, fuga mollitia quam reiciendis sint aspernatur voluptatem cum quod nulla cumque asperiores illum distinctio aperiam quibusdam atque corporis sit. Fugit ea voluptas accusamus maxime commodi, laborum rem repellendus.</p>
@@ -59,6 +74,7 @@
             <li>Nombre3</li>
         </ol>
     </footer>
+<scriptsrc="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 

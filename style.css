@@ -9,9 +9,35 @@ align-items: center;
 header a {
 margin-right: 3em;
 }
+
+
+/* Dark mode */
+
+ html.dark-mode {
+  filter: invert(100%);
+}
+
+html.dark-mode img {
+  filter: invert(100%);
+}
+
+/* html, body {
+  color: #222;
+  background-color: #fff;
+  height: 100%;
+} */
+
+.dark-mode-switch {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  padding: .5rem 1rem;
+  background-color: #ddd;
+}
+
+/* termina dark mode */
   
-  
-body{background-color:whitesmoke;}
+/* body{background-color:whitesmoke;} */
 
 #titular{color:navy;font-size:50px;font-family: 'Roboto', sans-serif;}
 
