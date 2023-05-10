@@ -1,15 +1,16 @@
-/* *{border:1px solid red} */
-
 header {
 display: flex;
 justify-content: center;
 align-items: center; 
 }
 
+.nav-link {
+  color: black;
+}
+
 header a {
 margin-right: 3em;
 }
-
 
 /* Dark mode */
 
@@ -20,12 +21,6 @@ margin-right: 3em;
 html.dark-mode img {
   filter: invert(100%);
 }
-
-/* html, body {
-  color: #222;
-  background-color: #fff;
-  height: 100%;
-} */
 
 .dark-mode-switch {
   position: fixed;
@@ -54,7 +49,6 @@ color:white
     color: black;
   }
   
-
 a:hover {
     background-color: darkgrey;
   }
@@ -72,24 +66,44 @@ align-items: center;
     }
   }
 
-/* Asi se hace un comentario en css */
+/* Botón "Return to top" */
 
-/* ul {
-    list-style-type: square;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  .rtp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px;
     background-color: #333;
-}
-  
-li {float: left;}
-  
-li a {
-    display: block;
-    color: white;
+    color: #fff;
+    font-size: 12px;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-} */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    border: 2px solid #333;
+  }
+  
+  .rtp:hover {
+    background-color: #fff;
+    color: #333;
+    border-color: #fff;
+  }
 
-/* AGREGAR FLEX */
+/* Boton JS */
+
+button {
+  background-color: #4CAF50; /* Verde */
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
