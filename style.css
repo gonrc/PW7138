@@ -53,11 +53,11 @@ a:hover {
     background-color: darkgrey;
   }
 
-.image-container {
+/* .image-container {
 display: flex;
 justify-content: center;
 align-items: center;
- }
+ } */
 
 /* Para pantallas de menos de 600px */
 @media (max-width: 600px) {

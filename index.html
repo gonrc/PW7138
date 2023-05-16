@@ -14,49 +14,64 @@
     <script src="myScript.js"></script>
 </head>
 <body class="text-bg-secondary p-3" id="top">
-    <header>
-        <!-- Estamos en el header -->
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link" href="./contacto.html" target=”_blank”>Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://campus.itba.edu.ar/ultra/courses/_26355_1/outline" target=”_blank”>Campus virtual (PW-71.38)</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/gonrc/PW7138" target=”_blank”>GitHub personal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/estebanpiazza/programacion-web-q1-a" target=”_blank”>GitHub de la clase</a>
-            </li>
-        </ul>
-    </header>
+    <div class="container-fluid">
+      <header class="text-center">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html" target=”_blank”>Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://campus.itba.edu.ar/ultra/courses/_26355_1/outline" target=”_blank”>Campus virtual (PW-71.38)</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/gonrc/PW7138" target=”_blank”>GitHub personal</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/estebanpiazza/programacion-web-q1-a" target=”_blank”>GitHub de la clase</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
     <main>
-        <!-- Estamos en el main -->
-        <div class="dark-mode-switch">
-            <input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')"> 
-            <label for="dark-mode">Dark mode</label>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-12">
+            <h1 id="titular" class="text-center">GRC - Legajo 64552</h1> <!--Este es el titulo de la pagina y es lo que Google lee para saber el contenido-->
+            <h2>Materia: 71.38 - Programación Web</h2>
+            <div class="row">
+            <div class="col-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus qui, praesentium quae laboriosam veniam vitae sunt animi eius facilis quasi possimus consectetur eaque. Illum aspernatur iure repellendus inventore quam saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque facere repudiandae exercitationem corrupti unde temporibus dicta explicabo inventore. Unde nostrum at possimus earum illum cupiditate ratione commodi, sed id assumenda! Fugit accusantium assumenda sunt velit quam sapiente saepe excepturi laboriosam quas cupiditate ex minus eligendi nam voluptatum, ab, neque odio doloribus. Minima veniam fugit quia omnis, ducimus ab dolore rem. Omnis ratione, fuga mollitia quam reiciendis sint aspernatur voluptatem cum quod nulla cumque asperiores illum distinctio aperiam quibusdam atque corporis sit. Fugit ea voluptas accusamus maxime commodi, laborum rem repellendus.</p>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12">
+                  <div class="img-fluid">
+                    <img src="./images/GitHub.jpeg" alt="Logo Github">
+                    <img src="http://via.placeholder.com/560" alt="Placeholder 560x560">
+                  </div>
+                </div>
+              </div>
+        </div>           
         </div>
-        <h1 id="titular">GRC - Legajo 64552</h1> <!--Este es el titulo de la pagina y es lo que Google lee para saber el contenido-->
-        <h2>Materia: 71.38 - Programación Web</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus qui, praesentium quae laboriosam veniam vitae sunt animi eius facilis quasi possimus consectetur eaque. Illum aspernatur iure repellendus inventore quam saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque facere repudiandae exercitationem corrupti unde temporibus dicta explicabo inventore. Unde nostrum at possimus earum illum cupiditate ratione commodi, sed id assumenda! Fugit accusantium assumenda sunt velit quam sapiente saepe excepturi laboriosam quas cupiditate ex minus eligendi nam voluptatum, ab, neque odio doloribus. Minima veniam fugit quia omnis, ducimus ab dolore rem. Omnis ratione, fuga mollitia quam reiciendis sint aspernatur voluptatem cum quod nulla cumque asperiores illum distinctio aperiam quibusdam atque corporis sit. Fugit ea voluptas accusamus maxime commodi, laborum rem repellendus.</p>
+    </div>
+</main>
+
+    <footer>
         <br>
         <button onclick="boton_test()">Probando JS</button>
         <br>
+        <a href="#top" class="rtp">Return to top</a>
 
-        <div class="image-container">
-            <img src="./images/GitHub.jpeg" alt="Logo Github">
-            <img src="http://via.placeholder.com/560" alt="Placeholder 560x560">
-        </div>
-
-    </main>
-    <footer>
-        <!-- Estamos en el footer -->
-        <a href="#top" class="rtp">Return to top</a>   
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
 
-<!-- asi pongo un comentario -->
 <!-- ver notas en google drive -->
+
+<!-- Arreglar responsiveness del navbar -->
