@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonzalo RC</title>
+    <title>Turismo Bonito!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -16,20 +16,20 @@
 <body class="text-bg-secondary p-3" id="top">
     <div class="container-fluid">
       <header class="text-center">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="./contacto.html" target=”_blank”>Contacto</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://campus.itba.edu.ar/ultra/courses/_26355_1/outline" target=”_blank”>Campus virtual (PW-71.38)</a>
+                  <a class="nav-link" href="https://goo.gl/maps/dsdvxvGFtKpqsDiUA" target=”_blank”>Mapa de Bonito</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/gonrc/PW7138" target=”_blank”>GitHub personal</a>
+                  <a class="nav-link" href="https://www.visitbrasil.com/es/destino-bonito-ms-espanhol/" target=”_blank”>Información oficial</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/estebanpiazza/programacion-web-q1-a" target=”_blank”>GitHub de la clase</a>
+                  <a class="nav-link" href="https://en.wikipedia.org/wiki/Bonito,_Mato_Grosso_do_Sul" target=”_blank”>Datos generales</a>
                 </li>
               </ul>
             </div>
@@ -39,8 +39,8 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-12">
-            <h1 id="titular" class="text-center">GRC - Legajo 64552</h1> <!--Este es el titulo de la pagina y es lo que Google lee para saber el contenido-->
-            <h2>Materia: 71.38 - Programación Web</h2>
+            <h1 id="titular" class="text-center">Turismo Bonito</h1> <!--Este es el titulo de la pagina y es lo que Google lee para saber el contenido-->
+            <h3>Agencia de turismo especializada en la localidad de Bonito, MS (BR)</h3>
             <div class="row">
             <div class="col-12">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus qui, praesentium quae laboriosam veniam vitae sunt animi eius facilis quasi possimus consectetur eaque. Illum aspernatur iure repellendus inventore quam saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque facere repudiandae exercitationem corrupti unde temporibus dicta explicabo inventore. Unde nostrum at possimus earum illum cupiditate ratione commodi, sed id assumenda! Fugit accusantium assumenda sunt velit quam sapiente saepe excepturi laboriosam quas cupiditate ex minus eligendi nam voluptatum, ab, neque odio doloribus. Minima veniam fugit quia omnis, ducimus ab dolore rem. Omnis ratione, fuga mollitia quam reiciendis sint aspernatur voluptatem cum quod nulla cumque asperiores illum distinctio aperiam quibusdam atque corporis sit. Fugit ea voluptas accusamus maxime commodi, laborum rem repellendus.</p>
@@ -49,22 +49,27 @@
             <br>
             <div class="row">
                 <div class="col-12">
-                  <div class="img-fluid">
-                    <img src="./images/GitHub.jpeg" alt="Logo Github">
-                    <img src="http://via.placeholder.com/560" alt="Placeholder 560x560">
+                  <div class="image-container">
+                    <img src="./images/Bonito-Mato-Grosso.jpg" alt="Rio con selva y escalera">
+                    <img src="./images/bonito-ms-1.jpg" alt="Cueva/cenote">
                   </div>
+                  <div id="quoteContainer" class="text-left" style="color: darkgray; margin-bottom: 20px;"></div>
                 </div>
               </div>
         </div>           
         </div>
     </div>
+
+  <h3 id="countdown"></h3> 
+<!-- Despues lo pongo mas lindo pero la funcion ya esta -->
 </main>
 
     <footer>
-        <br>
-        <button onclick="boton_test()">Probando JS</button>
-        <br>
-        <a href="#top" class="rtp">Return to top</a>
+      <div id="display-area" style="font-size: small; color: lightgray;"></div>
+      <a href="#top" class="rtp">Volver arriba</a>
+        <p class="text-center">&copy; 2023 Turismo Bonito / Bonito Tourism. Todos los derechos reservados.</p>
+        <div id="display-area" class="text-center"></div>
+
 
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
@@ -73,5 +78,3 @@
 </html>
 
 <!-- ver notas en google drive -->
-
-<!-- Arreglar responsiveness del navbar -->
