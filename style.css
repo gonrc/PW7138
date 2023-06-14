@@ -17,25 +17,21 @@ h3 {
   color: black;
 }
 
-header a {
-margin-right: 3em;
-}
-
-#titular{color:lightgrey;font-size:50px;font-family: 'Roboto', sans-serif;}
+#titular{color:lightgrey;font-size:50px;font-family: "Roboto", Arial, sans-serif}
 
 * {
-    font-family: Roboto;
+    font-family: "Roboto", Arial, sans-serif
    }
 
-p{background-color: #989898 ;
-color:white
- }
+p {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color:lightgrey;
+  margin-bottom: 10px;
+}
 
- p::first-letter {
-    font-size: 2em;
-    color: black;
-  }
-  
+
 a:hover {
     background-color: darkgrey;
   }
@@ -53,51 +49,74 @@ a:hover {
   margin: 10px;
 }
 
-/* Para pantallas de menos de 600px */
-@media (max-width: 600px) {
-    .image-container {
-      flex-direction: column;
-    }
-  }
-
 /* Botón "Volver arriba" */
 
-  .rtp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 90px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 6px;
-    background-color: #333;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
-    border: 2px solid #333;
-  }
-  
-  .rtp:hover {
-    background-color: #fff;
-    color: #333;
-    border-color: #fff;
-  }
-
-/* Boton JS */
-
-button {
-  background-color: #4CAF50; /* Verde */
-  border: none;
-  color: white;
-  padding: 10px 10px;
+.rtp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  border: 2px solid #333;
+}
+
+.rtp:hover {
+  background-color: #fff;
+  color: #333;
+  border-color: #fff;
+}
+
+
+/* Estilo para la parte de la cuenta regresiva */
+
+.countdown-container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #BDFCC9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 850px;
+}
+
+h2 {
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+li span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.countdown-label {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 4px;
 }

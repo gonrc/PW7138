@@ -1,77 +1,97 @@
-//---------------------------------------------------------------------//
 // Mostrar el tamaño del viewport
 
+// Agrega un evento que se ejecuta cuando el contenido de la web se cargó completamente
 document.addEventListener("DOMContentLoaded", function() {
+  // Llama a la función "browser_display_area" para mostrar el tamaño del viewport
   browser_display_area();
+  // Agrega un evento que se ejecuta cuando se cambia el tamaño de la ventana
   window.addEventListener("resize", browser_display_area);
-});
-
-function browser_display_area() {
+  });
+  
+  // Define una función para obtener y mostrar el tamaño del viewport
+  function browser_display_area() {
   var viewportwidth;
   var viewportheight;
   
+  // Verifica si la propiedad "window.innerWidth" está definida para obtener el ancho y alto del viewport
   if (typeof window.innerWidth != 'undefined') {
-    viewportwidth = window.innerWidth;
-    viewportheight = window.innerHeight;
+  viewportwidth = window.innerWidth;
+  viewportheight = window.innerHeight;
   }
   
+  // Obtiene el elemento con el ID "display-area"
   var displayAreaElement = document.getElementById("display-area");
+  // Actualiza el contenido HTML del elemento con el tamaño del viewport
   displayAreaElement.innerHTML = 'El ancho de tu viewport es ' + viewportwidth + 'x' + viewportheight;
-}
-
-//---------------------------------------------------------------------//
-// Frases random abajo de la foto
-
-window.addEventListener('DOMContentLoaded', function() {
-  var quotes = [
-    "Experimenta la belleza de los ríos y cascadas de Bonito, donde puedes nadar, hacer snorkel y buceo en aguas cristalinas. También puedes hacer recorridos en bote, kayak y paddleboard para explorar las maravillas naturales de Bonito.",
-    "Descubre la diversa flora y fauna de los bosques de Bonito, que albergan muchas especies raras y en peligro de extinción. Puedes hacer excursiones de senderismo y observación de aves para explorar la belleza de los bosques y ver la vida silvestre de cerca.",
-    "Explora el mundo subterráneo de las cuevas y cavernas de Bonito, donde puedes ver impresionantes formaciones rocosas, ríos subterráneos y ecosistemas únicos. Puedes hacer recorridos guiados de las cuevas, donde podrás aprender sobre la geología e historia de la zona."
-  ];
-  var quoteContainer = document.getElementById("quoteContainer");
-
-  function displayRandomQuote() {
-    var rand = Math.floor(Math.random() * quotes.length);
-    quoteContainer.textContent = quotes[rand];
   }
 
-  displayRandomQuote();
+//---------------------------------------------------------------------
+// Frases random abajo de la foto
 
-  setInterval(displayRandomQuote, 15000); // Para que cambie cada 15 segundos
-});
+// Agrega un evento que se ejecuta cuando el contenido de la web se cargó completamente
+window.addEventListener('DOMContentLoaded', function() {
+  // Define un arrange de frases
+  var quotes = [
+  "Experimentá la belleza de los ríos y cascadas de Bonito, donde podés nadar, hacer snorkel y buceo en aguas cristalinas. También podés hacer recorridos en bote, kayak y paddleboard para explorar las maravillas naturales de Bonito.",
+  "Descubrí la diversa flora y fauna de los bosques de Bonito, que albergan muchas especies raras y en peligro de extinción. Puedes hacer excursiones de senderismo y observación de aves para explorar la belleza de los bosques y ver la vida silvestre de cerca.",
+  "Explorá el mundo subterráneo de las cuevas y cavernas de Bonito, donde podés ver impresionantes formaciones rocosas, ríos subterráneos y ecosistemas únicos. Podés hacer recorridos guiados de las cuevas, donde podrás aprender sobre la geología e historia de la zona."
+  ];
+  
+  // Obtiene el contenedor donde se mostrarán las frases
+  var quoteContainer = document.getElementById("quoteContainer");
+  
+  // Define una función para mostrar una frase aleatoria
+  function displayRandomQuote() {
+  // Genera un número aleatorio entre 0 y la longitud del arrange de frases
+  var rand = Math.floor(Math.random() * quotes.length);
+  // Asigna el contenido de texto de quoteContainer a la frase seleccionada
+  quoteContainer.textContent = quotes[rand];
+  }
+  
+  // Muestra una frase aleatoria al cargar la página
+  displayRandomQuote();
+  
+  // Establece un intervalo para cambiar la frase cada 15 segundos
+  setInterval(displayRandomQuote, 15000);
+  });
 
 //---------------------------------------------------------------------
-// Cuenta regresiva a "promo primavera"
+// Cuenta regresiva para "promo primavera"
 
-function countdown() {
-  // Fecha limite: 21/09/20323
-  const targetDate = new Date("September 21, 2023").getTime();
+// Uso una función anónima autoejecutable para evitar conflictos de nombres y mantener el ámbito local.
+(function () {
+  // Se definen las constantes para representar las unidades de tiempo en milisegundos.
+  const segundo = 1000,
+    minuto = segundo * 60,
+    hora = minuto * 60,
+    dia = hora * 24;
 
-  // Actualizar el contador cada segundo
-  const countdownInterval = setInterval(() => {
-    // Obtener el dia y fecha actual
-    const currentDate = new Date().getTime();
+  // Se define el 21 de septiembre de 2023 como fecha objetivo y se convierte a milisegundos.
+  const fechaObjetivo = new Date("September 21, 2023").getTime();
 
-    // Calcular el tiempo restante
-    const remainingTime = targetDate - currentDate;
+  // Se utiliza setInterval para ejecutar la función cada segundo.
+  const cuentaRegresiva = setInterval(function () {
+    // Se obtiene la fecha actual en milisegundos.
+    const ahora = new Date().getTime();
 
-    // Frenar la cuenta regresiva si ya llegamos a la fecha limite
-    if (remainingTime <= 0) {
-      clearInterval(countdownInterval);
-      return;
+    // Se calcula la diferencia entre la fecha objetivo y la fecha actual.
+    const distancia = fechaObjetivo - ahora;
+
+    // Se actualizan los elementos en el documento HTML con los valores correspondientes.
+    document.getElementById("days").innerText = Math.floor(distancia / dia);
+    document.getElementById("hours").innerText = Math.floor((distancia % dia) / hora);
+    document.getElementById("minutes").innerText = Math.floor((distancia % hora) / minuto);
+    document.getElementById("seconds").innerText = Math.floor((distancia % minuto) / segundo);
+
+    // Si la distancia es menor que cero, significa que se alcanzó o pasó la fecha objetivo.
+    // Se actualiza el texto del "headline" y se oculta el elemento "countdown".
+    if (distancia < 0) {
+      document.getElementById("headline").innerText = "Llegó la Promo Primavera!";
+      document.getElementById("countdown").style.display = "none";
+
+      // Se utiliza clearInterval para detener la ejecución de la cuenta regresiva.
+      clearInterval(cuentaRegresiva);
     }
-
-    // Calcular los dias, horas, minutos y segundos restantes
-    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-    // Mostrar el resultado en el elemento con id="countdown"
-    document.getElementById("countdown").innerHTML = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
   }, 1000);
-}
-
-// Llamar a la funcion cuando la pagina se cargue
-window.onload = countdown;
+})();
 
