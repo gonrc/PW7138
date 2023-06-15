@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Obtiene el elemento con el ID "display-area"
   var displayAreaElement = document.getElementById("display-area");
   // Actualiza el contenido HTML del elemento con el tamaño del viewport
-  displayAreaElement.innerHTML = 'El ancho de tu viewport es ' + viewportwidth + 'x' + viewportheight;
+  displayAreaElement.innerHTML = 'El tamaño de tu viewport es ' + viewportwidth + 'x' + viewportheight;
   }
 
 //---------------------------------------------------------------------
