@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Define una función para obtener y mostrar el tamaño del viewport
   function browser_display_area() {
-  var viewportwidth;
-  var viewportheight;
+  let viewportwidth;
+  let viewportheight;
   
   // Verifica si la propiedad "window.innerWidth" está definida para obtener el ancho y alto del viewport
   if (typeof window.innerWidth != 'undefined') {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   // Obtiene el elemento con el ID "display-area"
-  var displayAreaElement = document.getElementById("display-area");
+  let displayAreaElement = document.getElementById("display-area");
   // Actualiza el contenido HTML del elemento con el tamaño del viewport
   displayAreaElement.innerHTML = 'El tamaño de tu viewport es ' + viewportwidth + 'x' + viewportheight;
   }
@@ -31,19 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
 // Agrega un evento que se ejecuta cuando el contenido de la web se cargó completamente
 window.addEventListener('DOMContentLoaded', function() {
   // Define un arrange de frases
-  var quotes = [
-  "Experimentá la belleza de los ríos y cascadas de Bonito, donde podés nadar, hacer snorkel y buceo en aguas cristalinas. También podés hacer recorridos en bote, kayak y paddleboard para explorar las maravillas naturales de Bonito.",
-  "Descubrí la diversa flora y fauna de los bosques de Bonito, que albergan muchas especies raras y en peligro de extinción. Puedes hacer excursiones de senderismo y observación de aves para explorar la belleza de los bosques y ver la vida silvestre de cerca.",
-  "Explorá el mundo subterráneo de las cuevas y cavernas de Bonito, donde podés ver impresionantes formaciones rocosas, ríos subterráneos y ecosistemas únicos. Podés hacer recorridos guiados de las cuevas, donde podrás aprender sobre la geología e historia de la zona."
+  const quotes = [
+  "Experimentá la belleza de los ríos y cascadas de Bonito, donde podés nadar, hacer snorkel y buceo en unas de las aguas más cristalinas del mundo.",
+  "Preparate para hacer recorridos en kayak, paddleboard y a flote para explorar sus maravillas naturales.",
+  "Podés hacer excursiones de senderismo y observación de aves para explorar la belleza de la selva y ver la vida silvestre de cerca.",
+  "Explorá el mundo subterráneo de las cuevas y cavernas de Bonito, donde podés ver impresionantes formaciones rocosas, ríos subterráneos y ecosistemas únicos.",
+  "Podés hacer recorridos guiados de las cuevas, donde aprenderás sobre la geología e historia de la zona.",
+  "Adentrate en la exuberante selva de Bonito y maravillate con su diversidad de especies vegetales y animales.",
+  "Descubrí la emoción de recorrer senderos en medio de la selva y observa de cerca monos, aves tropicales y muchos otros habitantes de este ecosistema único.",
+  "Sumergite en la aventura y disfruta de actividades como el rappel, el canopy y el safari fotográfico en la selva de Bonito, viviendo experiencias inolvidables rodeado de naturaleza salvaje."
   ];
   
   // Obtiene el contenedor donde se mostrarán las frases
-  var quoteContainer = document.getElementById("quoteContainer");
+  let quoteContainer = document.getElementById("quoteContainer");
   
   // Define una función para mostrar una frase aleatoria
   function displayRandomQuote() {
   // Genera un número aleatorio entre 0 y la longitud del arrange de frases
-  var rand = Math.floor(Math.random() * quotes.length);
+  let rand = Math.floor(Math.random() * quotes.length);
   // Asigna el contenido de texto de quoteContainer a la frase seleccionada
   quoteContainer.textContent = quotes[rand];
   }
@@ -52,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
   displayRandomQuote();
   
   // Establece un intervalo para cambiar la frase cada 15 segundos
-  setInterval(displayRandomQuote, 15000);
+  setInterval(displayRandomQuote, 7000);
   });
 
 //---------------------------------------------------------------------

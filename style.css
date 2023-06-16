@@ -5,8 +5,24 @@ align-items: center;
 }
 
 body {
-  background-color: #1E2621;
+  background-image: url("./images/Rio-da-Prata.jpg"); /* Foto de fondo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
+
+.image-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1E2621;
+  opacity: 0.9; /* Opacidad del fondo ara regular cuanto se ve la foto */
+  z-index: -1;
+}
+
 
 h3 {
   color: #BDFCC9; 
@@ -119,4 +135,20 @@ li span {
   font-size: 1rem;
   color: #777;
   margin-top: 4px;
+}
+
+/* Media query para viewports <400px */
+@media (max-width: 400px) {
+  li {
+    padding: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .countdown-label {
+    font-size: 0.85rem;
+  }
+
+  li span {
+    font-size: 1.5rem;
+  }
 }
