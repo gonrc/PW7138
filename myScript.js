@@ -99,3 +99,57 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }, 1000);
 })();
+
+//---------------------------------------------------------------------
+// Validación del formulario de contacto con alertas de error y envio
+
+// Escucha el evento de envío del formulario y ejecuta la función de validación
+document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+    validateForm();
+});
+
+// Función de validación del formulario
+function validateForm() {
+    const namePattern = /^[a-zA-Z\s]+$/; // Patrón para validar solo letras y espacios
+    const emailPattern = /^[^\s@]+@[^\s@]+.[^\s@]+$/; // Patrón para validar el formato del correo electrónico
+    const phonePattern = /^\d{8,15}$/; // Patrón para validar solo números y máximo 15 dígitos
+
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const messageInput = document.getElementById("message");
+
+    let isFormValid = true;
+
+    // Validación del nombre
+    if (!namePattern.test(nameInput.value)) {
+        alert("Ingrese un nombre válido (solo letras).");
+        isFormValid = false;
+    }
+
+    // Validación del mail
+    if (!emailPattern.test(emailInput.value)) {
+        alert("Ingrese un correo electrónico válido.");
+        isFormValid = false;
+    }
+
+    // Validación del teléfono
+    if (!phonePattern.test(phoneInput.value)) {
+        alert("Ingrese un número de teléfono válido (solo números y entre 8 y 15 dígitos).");
+        isFormValid = false;
+    }
+
+    // Validación del mensaje
+    if (messageInput.value.length < 10 || messageInput.value.length > 3000) {
+        alert("Ingrese un mensaje con longitud de entre 10 y 3000 caracteres.");
+        isFormValid = false;
+    }
+
+    // Si todos los campos son válidos, se muestra una alerta de éxito y se reinicia el formulario
+    if (isFormValid) {
+        alert("¡Mail enviado!");
+        document.getElementById("form").reset();
+    }
+
+}

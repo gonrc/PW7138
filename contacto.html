@@ -5,27 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/logo_G.ico">
-    <title>Proximamente!</title>
-    <style>
-    body {
-        background-color: #BDFCC9;
-        font-family: "Roboto", Arial, sans-serif;
-        text-align: center;
-    }
-
-    .coming-soon {
-        color: #333;
-        font-size: 36px;
-        margin-top: 200px;
-    }
-    </style>
+    <link rel="stylesheet" href="style_c.css">
+    <title>Contáctenos - TB!</title>
 </head>
 
 <body>
-    <div class="coming-soon">
-        Proximamente disponible!
+    <div class="container">
+        <div>
+            <h1>Contáctenos</h1>
+        </div>
+        <div>
+            <form id="form">
+                <div>
+                    <label for="name">Nombre completo</label>
+                    <input type="text" name="name" id="name" placeholder="Juan Pérez" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="vos@mail.com" required>
+                </div>
+                <div>
+                    <label for="phone">Teléfono</label>
+                    <input type="text" name="phone" id="phone" placeholder="54 9 11 6666-7777" required>
+                </div>
+                <div>
+                    <label for="message">Mensaje</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Su mensaje..." required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <footer>
+        <p class="footer">&copy; 2023 Turismo Bonito / Bonito Tourism. Todos los derechos reservados.</p>
+    </footer>
+    <script src="myScript.js"></script>
 </body>
 
 </html>
