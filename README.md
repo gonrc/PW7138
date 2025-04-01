@@ -1,6 +1,6 @@
 # Turismo Bonito 🌴🇧🇷
 
-Sitio web desarrollado como trabajo práctico para la materia **Programación Web (71.38)** en el primer cuatrimestre de 2023 (ITBA).
+Sitio web desarrollado como trabajo práctico para la materia **Programación Web (71.38)** en el 1er cuatrimestre de 2023 (ITBA).
 
 ## 🌍 Descripción
 
@@ -20,7 +20,3 @@ Esta página está dedicada a promocionar el turismo en **Bonito, Brasil**, una 
 - **CSS** – estilos personalizados.
 - **JavaScript** – interactividad, lógica de frases, cuenta regresiva y validación.
 - **Bootstrap** – sistema de grillas y componentes para diseño responsive.
-
-## 📅 Fecha
-
-2023 – Primer cuatrimestre
